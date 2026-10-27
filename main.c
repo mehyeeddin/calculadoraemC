@@ -13,7 +13,7 @@ int main() {
             return 0;
         }
 
-        if(N > '5' || N < '1') {
+        if(N != '1' || N != '2' || N != '3' || N != '4' || N != '5') {
             printf("Erro: A opcao informada deve estar entre 1 e 5 e nao deve ser uma letra.\n");
             continue;
         }
