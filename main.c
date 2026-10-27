@@ -5,16 +5,16 @@ int main() {
     while(1) {
         printf("===============================\n   Calculadora Simples\n===============================\nSelecione uma operacao:\n1. Adicao\n2. Subtracao\n3. Multiplicacao\n4. Divisao\n5. Sair\nOpcao:");
         double Um, Dois;
-        int N;
-        scanf("%i", &N);
+        char N;
+        scanf(" %c", &N);
 
-        if( N == 5 ) {
+        if( N == '5' ) {
             printf("Obrigado por usar a calculadora! Ate a proxima.");
             return 0;
         }
 
-        if(N > 5 || N < 1) {
-            printf("Erro: A opcao informada deve estar entre 1 e 5.\n");
+        if(N > '5' || N < '1') {
+            printf("Erro: A opcao informada deve estar entre 1 e 5 e nao deve ser uma letra.\n");
             continue;
         }
 
@@ -26,19 +26,19 @@ int main() {
 
         scanf("%lf", &Dois);
 
-        if( N == 1 ) {
+        if( N == '1' ) {
             printf("Resultado: %g + %g = %g\n", Um, Dois, Um + Dois);
         }
 
-        if( N == 2 ) {
+        if( N == '2' ) {
             printf("Resultado: %g - %g = %g\n", Um, Dois, Um - Dois);
         }
 
-        if( N == 3 ) {
+        if( N == '3' ) {
             printf("Resultado: %g * %g = %g\n", Um, Dois, Um * Dois);
         }
 
-        if( N == 4 ) {
+        if( N == '4' ) {
             if(Dois != 0) { 
                 printf("Resultado: %g / %g = %g\n", Um, Dois, Um / Dois);
             } else {
@@ -61,7 +61,7 @@ int main() {
             }
         }
 
-        if(M == 'n' && M == 'N') {
+        if(M == 'n' || M == 'N') {
             printf("Obrigado por usar a calculadora! Ate a proxima.");
             return 0;   
         }
