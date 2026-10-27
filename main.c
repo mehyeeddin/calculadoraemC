@@ -4,7 +4,8 @@ int main() {
 
     while(1) {
         printf("===============================\n   Calculadora Simples\n===============================\nSelecione uma operacao:\n1. Adicao\n2. Subtracao\n3. Multiplicacao\n4. Divisao\n5. Sair\nOpcao:");
-        int N, Um, Dois;
+        double Um, Dois;
+        int N;
         scanf("%i", &N);
 
         if( N == 5 ) {
@@ -14,27 +15,27 @@ int main() {
 
         printf("Digite o primeiro numero: ");
 
-        scanf("%i", &Um);
+        scanf("%lf", &Um);
 
         printf("Digite o sugundo numero: ");
 
-        scanf("%i", &Dois);
+        scanf("%lf", &Dois);
 
         if( N == 1 ) {
-            printf("Resultado: %i + %i = %i\n", Um, Dois, Um + Dois);
+            printf("Resultado: %g + %g = %g\n", Um, Dois, Um + Dois);
         }
 
         if( N == 2 ) {
-            printf("Resultado: %i - %i = %i\n", Um, Dois, Um - Dois);
+            printf("Resultado: %g - %g = %g\n", Um, Dois, Um - Dois);
         }
 
         if( N == 3 ) {
-            printf("Resultado: %i * %i = %i\n", Um, Dois, Um * Dois);
+            printf("Resultado: %g * %g = %g\n", Um, Dois, Um * Dois);
         }
 
         if( N == 4 ) {
             if(Dois != 0) { 
-                printf("Resultado: %i / %i = %i\n", Um, Dois, Um / Dois);
+                printf("Resultado: %g / %g = %g\n", Um, Dois, Um / Dois);
             } else {
                 printf("Erro: Divisao por zero nao e permitida.\n");
             }
@@ -48,7 +49,7 @@ int main() {
         while(Ver) {
             scanf(" %c", &M);
 
-            if(M != 's' && M != 'n') {
+            if(M != 's' && M != 'n' && M != 'N' && M != 'S') {
                 printf("Resposta invalida. Por favor, digite 's' para sim ou 'n' para nao.\n");
             } else {
                 Ver = 0;
