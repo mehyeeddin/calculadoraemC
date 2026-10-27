@@ -13,6 +13,11 @@ int main() {
             return 0;
         }
 
+        if(N > 5 || N < 1) {
+            printf("Erro: A opcao informada deve estar entre 1 e 5.\n");
+            continue;
+        }
+
         printf("Digite o primeiro numero: ");
 
         scanf("%lf", &Um);
@@ -56,7 +61,7 @@ int main() {
             }
         }
 
-        if(M == 'n') {
+        if(M == 'n' && M == 'N') {
             printf("Obrigado por usar a calculadora! Ate a proxima.");
             return 0;   
         }
