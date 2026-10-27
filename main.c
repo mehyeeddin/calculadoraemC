@@ -1,12 +1,22 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 int main() {
 
     while(1) {
         printf("===============================\n   Calculadora Simples\n===============================\nSelecione uma operacao:\n1. Adicao\n2. Subtracao\n3. Multiplicacao\n4. Divisao\n5. Sair\nOpcao:");
         double Um, Dois;
+        char v[100];
         char N;
-        scanf(" %c", &N);
+        scanf("%99s", v);
+
+        if(strlen(v) > 1) {
+             printf("Erro: A opcao informada deve estar entre 1 e 5 e nao deve ser uma letra.\n");
+            continue;
+        }
+
+        N = v[0];
 
         if( N == '5' ) {
             printf("Obrigado por usar a calculadora! Ate a proxima.");
